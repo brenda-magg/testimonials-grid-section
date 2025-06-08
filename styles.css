@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Purple50: hsl(260, 100%, 95%);
+    --Purple300: hsl(264, 82%, 80%);
+    --Purple500: hsl(263, 55%, 52%);
+    --White: hsl(0, 0%, 100%);
+    --Grey100: hsl(214, 17%, 92%);
+    --Grey200: hsl(0, 0%, 81%);
+    --Grey400: hsl(224, 10%, 45%);
+    --Grey500: hsl(217, 19%, 35%);
+    --DarkBlue: hsl(219, 29%, 14%);
+    --Black: hsl(0, 0%, 7%);
+}
+
+.user-details {
+    display: flex;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 1.12em;
+    background: var(--Grey100);
+    padding: 6em 6em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.img-d {
+    max-width: 3rem;
+    border-radius: 50%;
+    border: 2px solid var(--Purple300);
+}
+
+.img-jo {
+    max-width: 3rem;
+    border-radius: 50%;
+    border: 2px solid var(--Grey200);
+}
+
+.img-k, .img-je {
+    max-width: 3rem;
+    border-radius: 50%;
+    border: 2px solid var(--White);
+}
+
+.img-p {
+    max-width: 3rem;
+    border-radius: 50%;
+    border: 2px solid var(--Purple500);
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.grid-items {
+    transform: scale(0.9);
+    width: min(80em, 100%);
+	display: grid;
+	gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "daniel    daniel  jonathan  kira"
+    "jeanette  patrick  patrick   kira"
+  ;
+}
+
+.item {
+    box-shadow: 40px 50px 30px var(--Grey200);
+}
+
+.daniel {
+    grid-area: daniel;
+  }
+
+  .jonathan {
+    grid-area: jonathan;
+  }
+
+  .jeanette {
+    grid-area: jeanette;
+  }
+
+  .patrick {
+    grid-area: patrick;
+  }
+
+  .kira {
+    grid-area: kira;
+  }
+
+/* UI */
+.daniel, .jonathan, .kira, .jeanette, .patrick {
+    display: grid;
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.daniel {
+    background-color: var(--Purple500);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 25rem;
+}
+
+.jonathan {
+    background-color: var(--Grey500);
+}
+
+.kira, .jeanette{
+    background-color: var(--White);
+}
+
+.patrick {
+    background-color: var(--DarkBlue);
+}
+
+/* Card info */
+.name-tag--d, .name-tag--jo, .name-tag--p {
+    color: var(--Grey100);
+    font-size: .90rem;
+    margin-left: 1rem;
+}
+
+.name-tag--je, .name-tag--k {
+    color: var(--Grey400);
+    font-size: .90rem;
+    margin-left: 1rem;
+}
+
+.review--d, .review--jo, .quote--d, .quote--jo {
+    color: var(--White);
+}
+
+.review--k, .review--je, .quote--k, .quote--je {
+    color: var(--Grey500);
+}
+
+.review--p, .quote--p {
+    color: var(--Grey200);
+}
+
+.op {
+    opacity: 0.7;
+}
+
+.attribution {
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    body {
+        padding: 0;
+    }
+
+    .grid-items {
+        grid-template-columns: 20rem 20rem;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+         "daniel  jonathan"
+         "jeanette patrick"
+         "kira     kira"
+        ;
+        justify-content: center;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        margin-bottom: .90rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 650px) {
+    body {
+        padding: 0;
+    }
+
+    .grid-items {
+      grid-template-columns: 2fr;
+      grid-template-rows: 25rem 15rem 15rem 22rem 28rem;  
+      grid-template-areas: 
+    "daniel "
+    "jonathan"
+    "jeanette"
+    "patrick"
+    "kira "
+  ;
+    }
+
+    h4 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    p {
+        font-size: .93rem;
+    }
+  }
+
+@media (max-width: 500px) {
+    body {
+        padding: 0;
+    }
+    .grid-items {
+        grid-template-columns: 20rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    p {
+        font-size: .85rem;
+    }
+}
