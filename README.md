@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Testimonials grid section]()
+- Solution URL: [Testimonials grid section](https://brenda-magg.github.io/testimonials-grid-section/)
 
 ## My process
 
