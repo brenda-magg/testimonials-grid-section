@@ -73,7 +73,6 @@ p {
     display: flex;
     justify-content: center;
     width: 100%;
-    min-height: 100vh;
 }
 
 .grid-items {
@@ -90,7 +89,7 @@ p {
 }
 
 .item {
-    box-shadow: 40px 50px 30px var(--Grey200);
+    box-shadow: 20px 20px 50px var(--Grey200);
 }
 
 .daniel {
